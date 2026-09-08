@@ -145,7 +145,7 @@
             designed for beginners.
         </p>
 
-        <a href="#signup" class="button">Get My Free Guide</a>
+        <button class="cta" onclick="showLeadForm()">Get My Free Guide</button>
     </section>
 
 
@@ -238,6 +238,16 @@
             return false;
         }
     </script>
+<script>
+function showLeadForm() {
+    const email = prompt("Enter your email to receive your free 7-day guide:");
 
+    if (email && email.includes("@")) {
+        alert("Thank you! Your free guide is on its way.");
+    } else if (email !== null) {
+        alert("Please enter a valid email address.");
+    }
+}
+</script>
 </body>
 </html>
